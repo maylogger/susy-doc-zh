@@ -214,31 +214,31 @@ And finally run your bundle:
  [7]: https://github.com/ericam/susy
  [8]: http://stackoverflow.com/questions/tagged/susy-compass
  [9]: http://twitter.com/compasssusy/
- [10]: http://susy.oddbird.net#start-install
- [11]: http://susy.oddbird.net#start-compass
+ [10]: http://susy.oddbird.net/guides/#start-install
+ [11]: http://susy.oddbird.net/guides/#start-compass
  [12]: http://compass-style.org/
- [13]: http://susy.oddbird.net#start-rails
- [14]: http://susy.oddbird.net#start-manual
+ [13]: http://susy.oddbird.net/guides/#start-rails
+ [14]: http://susy.oddbird.net/guides/#start-manual
  [15]: https://github.com/ericam/susy/archive/master.zip
- [16]: http://susy.oddbird.net#start-usage
- [17]: http://susy.oddbird.net#start-settings
- [18]: http://susy.oddbird.net#start-basic
+ [16]: http://susy.oddbird.net/guides/#start-usage
+ [17]: http://susy.oddbird.net/guides/#start-settings
+ [18]: http://susy.oddbird.net/guides/#start-basic
  [19]: http://susy.oddbird.net/guides/reference/#ref-container
  [20]: http://susy.oddbird.net/guides/reference/#ref-span-columns
- [21]: http://susy.oddbird.net#start-responsive
+ [21]: http://susy.oddbird.net/guides/#start-responsive
  [22]: http://susy.oddbird.net/guides/reference/#ref-at-breakpoint
- [23]: http://susy.oddbird.net#start-advanced
+ [23]: http://susy.oddbird.net/guides/#start-advanced
  [24]: http://susy.oddbird.net/guides/reference/#ref-push
  [25]: http://susy.oddbird.net/guides/reference/#ref-pull
  [26]: http://susy.oddbird.net/guides/reference/
- [27]: http://susy.oddbird.net#troubleshooting
- [28]: http://susy.oddbird.net#troubleshooting-versions
+ [27]: http://susy.oddbird.net/guides/#troubleshooting
+ [28]: http://susy.oddbird.net/guides/#troubleshooting-versions
  [29]: http://rvm.io/rvm/install/
- [30]: http://susy.oddbird.net#troubleshooting-rails-install
+ [30]: http://susy.oddbird.net/guides/#troubleshooting-rails-install
  [31]: http://www.virtualenv.org/en/latest/index.html
  [32]: https://gist.github.com/1078601
  [33]: http://gembundler.com/
- [34]: http://susy.oddbird.net#troubleshooting-compass-install
+ [34]: http://susy.oddbird.net/guides/#troubleshooting-compass-install
  [35]: http://rvm.io
  [36]: http://rvm.io/rvm/best-practices/
  [37]: http://gembundler.com/gemfile.html
