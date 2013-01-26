@@ -205,45 +205,12 @@ And finally run your bundle:
     bundle
 
 
-Version 1.0.5
-
-## [Installation][10]
-
-*   [Compass][11]
-*   [Rails 3.x][13]
-*   [Manual Start][38]
-
-## [Usage][16]
-
-*   [Settings][17]
-*   [Basic Grids][18]
-*   [Responsive Grids][21]
-*   [Advanced][23]
-
-## [Troubleshooting][27]
-
-*   [Version Management][28]
-*   [Compass Install][34]
-*   [Rails 3.x Install][30]
-
-Susy is based on Natalie Downe's [CSS Systems][39], made possible by [Sass][40], and made easy with [Compass][2]. You can use it anywhere, from static sites to Django, Rails, Wordpress and more. It even comes packaged as part of [Middleman][41], to make your life easy.
-
-This site was built with HTML5 and CSS3 using [Middleman][41], [Compass][2], [Sass][40], [Susy][1], [HTML5 Boilerplate][42], [Modernizr][43], [Modular Scale][44], [Solarized][45] colors, [Pygments][46] syntax highlighting, [IcoMoon][47] icons, and Franklin Gothic with Century OldStyle from [Fontspring][48].
-
-Susy was created by [Eric A. Meyer][49] &amp; [OddBird][50], and is maintained with the help of [Danny Palmer][51], and a number of wonderful [contributors][52]. [Get involved][53]!
-
-[ Copyright © 2012 ][54] [Eric A. Meyer][55]
-An [OddBird][56] project.
-
-*   [show grid][57]
-*   [hide grid][58]
-
- [1]: http://susy.oddbird.net/
+ [1]: http://susy.oddbird.net/guides/
  [2]: http://www.compass-style.org/
  [3]: http://susy.oddbird.net/guides/getting-started/
  [4]: http://susy.oddbird.net/guides/reference/
- [5]: http://susy.oddbird.net/demos/
- [6]: http://susy.oddbird.net/sites-using-susy/
+ [5]: http://susy.oddbird.net/guides/demos/
+ [6]: http://susy.oddbird.net/guides/sites-using-susy/
  [7]: https://github.com/ericam/susy
  [8]: http://stackoverflow.com/questions/tagged/susy-compass
  [9]: http://twitter.com/compasssusy/
@@ -256,14 +223,14 @@ An [OddBird][56] project.
  [16]: http://susy.oddbird.net#start-usage
  [17]: http://susy.oddbird.net#start-settings
  [18]: http://susy.oddbird.net#start-basic
- [19]: http://susy.oddbird.net/reference/#ref-container
- [20]: http://susy.oddbird.net/reference/#ref-span-columns
+ [19]: http://susy.oddbird.net/guides/reference/#ref-container
+ [20]: http://susy.oddbird.net/guides/reference/#ref-span-columns
  [21]: http://susy.oddbird.net#start-responsive
- [22]: http://susy.oddbird.net/reference/#ref-at-breakpoint
+ [22]: http://susy.oddbird.net/guides/reference/#ref-at-breakpoint
  [23]: http://susy.oddbird.net#start-advanced
- [24]: http://susy.oddbird.net/reference/#ref-push
- [25]: http://susy.oddbird.net/reference/#ref-pull
- [26]: http://susy.oddbird.net/reference/
+ [24]: http://susy.oddbird.net/guides/reference/#ref-push
+ [25]: http://susy.oddbird.net/guides/reference/#ref-pull
+ [26]: http://susy.oddbird.net/guides/reference/
  [27]: http://susy.oddbird.net#troubleshooting
  [28]: http://susy.oddbird.net#troubleshooting-versions
  [29]: http://rvm.io/rvm/install/
@@ -275,24 +242,3 @@ An [OddBird][56] project.
  [35]: http://rvm.io
  [36]: http://rvm.io/rvm/best-practices/
  [37]: http://gembundler.com/gemfile.html
- [38]: http://susy.oddbird.net#start-simple
- [39]: http://www.slideshare.net/nataliedowne/css-systems-presentation
- [40]: http://www.sass-lang.com/
- [41]: http://www.middlemanapp.com/
- [42]: http://html5boilerplate.com/
- [43]: http://www.modernizr.com/
- [44]: https://github.com/scottkellum/modular-scale
- [45]: http://ethanschoonover.com/solarized
- [46]: http://pygments.org/
- [47]: http://keyamoon.com/icomoon/
- [48]: http://www.fontspring.com/
- [49]: http://github.com/ericam
- [50]: http://oddbird.net
- [51]: http://www.dannyprose.com
- [52]: https://github.com/ericam/susy/graphs/contributors
- [53]: http://github.com/ericam/susy/
- [54]: https://github.com/ericam/susy/blob/master/LICENSE.txt
- [55]: http://eric.andmeyer.com/
- [56]: http://oddbird.net/
- [57]: http://susy.oddbird.net#susy-oddbird-net
- [58]: http://susy.oddbird.net#
