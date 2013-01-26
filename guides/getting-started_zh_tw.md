@@ -1,132 +1,81 @@
----
-title: Getting Started
-class: guide
-side_content: >
-  <p class="version">Version <span>1.0.5</span></p>
-  <h2><a href="#start-install">Installation</a></h2>
-  <ul>
-    <li><a href="#start-compass">Compass</a></li>
-    <li><a href="#start-rails">Rails 3.x</a></li>
-    <li><a href="#start-yeoman">Yeoman</a></li>
-    <li><a href="#start-simple">Manual Start</a></li>
-  </ul>
-  <h2><a href="#start-usage">Usage</a></h2>
-  <ul>
-    <li><a href="#start-settings">Settings</a></li>
-    <li><a href="#start-basic">Basic Grids</a></li>
-    <li><a href="#start-responsive">Responsive Grids</a></li>
-    <li><a href="#start-advanced">Advanced</a></li>
-  </ul>
-  <h2><a href="#troubleshooting">Troubleshooting</a></h2>
-  <ul>
-    <li><a href="#troubleshooting-versions">Version Management</a></li>
-    <li><a href="#troubleshooting-compass-install">Compass Install</a></li>
-    <li><a href="#troubleshooting-rails-install">Rails 3.x  Install</a></li>
-  </ul>
----
+[Permalink](http://susy.oddbird.net/guides/ "Permalink to Susy: Getting Started")
 
-## <a href="#start-install" id="start-install">Installation</a>
+# Susy: 入門
 
-### <a href="#start-compass" id="start-compass">Compass</a>
+## [安裝][10]
+
+### [Compass][11]
 
 Install from the command line:
 
-    :::bash
     # command line
     gem install susy
 
-Create a new [Compass][compass] project:
 
-    :::bash
+Create a new [Compass][12] project:
+
     # command line
-    compass create <project name> -r susy -u susy
+    compass create  -r susy -u susy
 
-Or update an existing [Compass][compass] project:
 
-    :::ruby
+Or update an existing [Compass][12] project:
+
     # config.rb
     require "susy"
 
-[compass]: http://compass-style.org/
 
-### <a href="#start-rails" id="start-rails">Rails 3.x</a>
+### [Rails 3.x][13]
 
-    :::ruby
     # Gemfile
     gem "susy"
 
+
 You may also need:
 
-    :::ruby
     # Gemfile
-    gem 'compass', '>= 0.12.2'
-    gem 'compass-rails', '>= 1.0.3'
+    gem 'compass', '&gt;= 0.12.2'
+    gem 'compass-rails', '&gt;= 1.0.3'
 
 
 And run:
 
-    :::bash
     # command line
     bundle install
 
-### <a href="#start-yeoman" id="start-yeoman">Yeoman</a>
-Edit your **Gruntfile.js** at the root level of your project and look for the Compass related rules, add the following inside the options object:
 
-    :::javascript
-    // Gruntfile.js
-    compass: {
-      dist: {
-        options: {
-          config: '.config.rb'
-        }
-      }
-    }
+### [Manual Start][14]
 
-Now create a **.config.rb** file at the same level as your Gruntfile with this:
-
-    :::ruby
-    # .config.rb
-    require "susy"
-
-And you are good to go!
-
-### <a href="#start-manual" id="start-manual">Manual Start</a>
 You can use this method if you're not using Compass from Terminal and/or Rails. This is going to work with CodeKit.
 
-* Simply <a href="https://github.com/ericam/susy/archive/master.zip">download</a> the zip file from GitHub
-* Copy the contents of the "sass" folder *feel free to remove everything else
-* Paste the files in your projects "sass" folder (or whatever you call it)
-* And import Susy! ( See <a href="#start-usage">Usage</a> )
-And you're good to go!
+*   Simply [download][15] the zip file from GitHub
+*   Copy the contents of the "sass" folder *feel free to remove everything else
+*   Paste the files in your projects "sass" folder (or whatever you call it)
+*   And import Susy! ( See [Usage][16] ) And you're good to go!
 
+## [Usage][16]
 
-
-## <a href="#start-usage" id="start-usage">Usage</a>
-
-    :::scss
     @import "susy";
 
 
+### [Settings][17]
 
-### <a href="#start-settings" id="start-settings">Settings</a>
 Set up your default grid values: total columns, column width, and gutter width.
 
-    :::scss
     $total-columns  : 12;             // a 12-column grid
     $column-width   : 4em;            // each column is 4em wide
     $gutter-width   : 1em;            // 1em gutters between columns
     $grid-padding   : $gutter-width;  // grid-padding equal to gutters
 
-### <a href="#start-basic" id="start-basic">Basic Grids</a>
+
+### [Basic Grids][18]
+
 The basic Susy grid is composed using two simple mixins:
 
-- Use the [container()][container] mixin to create your initial grid context.
-- Use the [span-columns()][span-columns] mixin to declare
-  the width of an element on the grid.
+*   Use the [container()][19] mixin to create your initial grid context.
+*   Use the [span-columns()][20] mixin to declare the width of an element on the grid.
 
 Here's a simple page layout:
 
-    :::scss
     .page {
       // page acts as a container for our grid.
       @include container;
@@ -149,17 +98,15 @@ Here's a simple page layout:
       }
     }
 
-### <a href="#start-responsive" id="start-responsive">Responsive Grids</a>
-Responsive Susy grids allow you to change the number of columns in a layout
-at different window sizes, using @media-queries with min and max widths.
-This requires one more mixin:
 
-- Use [at-breakpoint()][at-breakpoint] to set different layouts
-  at min- and max-width breakpoints.
+### [Responsive Grids][21]
+
+Responsive Susy grids allow you to change the number of columns in a layout at different window sizes, using @media-queries with min and max widths. This requires one more mixin:
+
+*   Use [at-breakpoint()][22] to set different layouts at min- and max-width breakpoints.
 
 Here's a mobile-first example:
 
-    :::scss
     $total-columns: 4;
 
     .page {
@@ -174,125 +121,178 @@ Here's a mobile-first example:
       }
     }
 
-### <a href="#start-advanced" id="start-advanced">Advanced</a>
-Susy is built to handle your unique markup, and any number of edge cases.
-It includes the standard [push()][push] and [pull()][pull] mixins,
-along with other useful functions and shortcuts,
-support for various grid styles,
-and even bi-directional grids for multi-lingual sites.
-Check the [reference documentation][reference] for details.
 
-[reference]: ../reference/
-[container]: ../reference/#ref-container
-[span-columns]: ../reference/#ref-span-columns
-[at-breakpoint]: ../reference/#ref-at-breakpoint
-[push]: ../reference/#ref-push
-[pull]: ../reference/#ref-pull
+### [Advanced][23]
 
-## <a href="#troubleshooting" id="troubleshooting">Troubleshooting</a>
+Susy is built to handle your unique markup, and any number of edge cases. It includes the standard [push()][24] and [pull()][25] mixins, along with other useful functions and shortcuts, support for various grid styles, and even bi-directional grids for multi-lingual sites. Check the [reference documentation][26] for details.
 
-### <a href="#troubleshooting-versions" id="troubleshooting-versions">Version Management</a>
+## [Troubleshooting][27]
 
-When you are working with bundled gems and dependencies
-across a number of different projects,
-managing gem versions can become an issue.
+### [Version Management][28]
 
-If you are working in a **Ruby** environment,
-we recommend using [RVM](http://rvm.io/rvm/install/).
-See our [Rails troubleshooting](#troubleshooting-rails-install)
-below for some basic instructions, or
-[dig into RVM's installation instructions](http://rvm.io/rvm/install/).
+When you are working with bundled gems and dependencies across a number of different projects, managing gem versions can become an issue.
 
-In a **Python** environment,
-we recommend [virtualenv](http://www.virtualenv.org/en/latest/index.html)
-in conjunction with these
-["postactivate" and "predeactivate" scripts](https://gist.github.com/1078601)
-to add support for Ruby gems.
+If you are working in a **Ruby** environment, we recommend using [RVM][29]. See our [Rails troubleshooting][30] below for some basic instructions, or [dig into RVM's installation instructions][29].
 
-Once you have that in place,
-[Bundler](http://gembundler.com/)
-can be used in either environment
-to manage the actual installation
-and updating of the gems.
+In a **Python** environment, we recommend [virtualenv][31] in conjunction with these ["postactivate" and "predeactivate" scripts][32] to add support for Ruby gems.
 
-### <a href="#troubleshooting-compass-install" id="troubleshooting-compass-install">Compass Install</a>
+Once you have that in place, [Bundler][33] can be used in either environment to manage the actual installation and updating of the gems.
 
-The old gem and the new gem have different names,
-but are required simply as ``susy``.
-That can cause a conflict if both gems are present.
+### [Compass Install][34]
 
-If you have installed Susy in the past,
-make sure you've uninstalled older versions:
+The old gem and the new gem have different names, but are required simply as `susy`. That can cause a conflict if both gems are present.
 
-    :::bash
+If you have installed Susy in the past, make sure you've uninstalled older versions:
+
     # command line
     gem uninstall compass-susy-plugin
     # "compass-susy-plugin" was the gem name for 0.9.x and lower
     # Susy 1.0 switches to "susy" as the gem name
 
+
 And then install 1.0:
 
-    :::bash
     # command line
     gem install susy
 
+
 Then use Compass as normal.
 
-### <a href="#troubleshooting-rails-install" id="troubleshooting-rails-install">Rails 3.x Install</a>
+### [Rails 3.x Install][30]
 
-We recommend you use [RVM](http://rvm.io)
-for using Susy with Rails projects.
-It has become the standard gem management system for Rails,
-it's very easy to install and use,
-and it helps create and manage Gemsets
-among different developers working on different branches.
+We recommend you use [RVM][35] for using Susy with Rails projects. It has become the standard gem management system for Rails, it's very easy to install and use, and it helps create and manage Gemsets among different developers working on different branches.
 
-[Here are some RVM best practices](http://rvm.io/rvm/best-practices/):
+[Here are some RVM best practices][36]:
 
-If you have installed Susy in the past,
-make sure you've uninstalled older versions.
-See [Compass Install](#troubleshooting-compass-install) above.
+If you have installed Susy in the past, make sure you've uninstalled older versions. See [Compass Install][34] above.
 
-[Install RVM](http://rvm.io/rvm/install/)
-(These are basics,
-if you do not have Ruby and Rails already installed in your environment,
-we [recommend you use RVM's installation instructions](http://rvm.io/rvm/install/)):
+[Install RVM][29] (These are basics, if you do not have Ruby and Rails already installed in your environment, we [recommend you use RVM's installation instructions][29]):
 
-    :::bash
     # command line
     # from your system's root:
     curl -L get.rvm.io | bash -s stable
 
+
 Create a gemset for your site:
 
-    :::bash
     # command line
     rvm gemset create fooBar
 
-Create an ``.rvmrc`` file at your site's root:
 
-    :::bash
+Create an `.rvmrc` file at your site's root:
+
     # .rvmrc
     rvm use 1.9.3@fooBar
     # Use whatever Ruby version number your app uses
 
-Now whenever you ``cd`` into your site's root,
-RVM will pick up and use that Gemset.
 
-``cd`` to your site and install [Bundler](http://gembundler.com/):
+Now whenever you `cd` into your site's root, RVM will pick up and use that Gemset.
 
-    :::bash
+`cd` to your site and install [Bundler][33]:
+
     # command line
     gem install bundler
 
-Add Susy to your ``Gemfile``
-([more info on Gemfiles](http://gembundler.com/gemfile.html)):
 
-    :::ruby
-    gem "susy", "~> 1.0.5"
+Add Susy to your `Gemfile` ([more info on Gemfiles][37]):
+
+    gem "susy", "~&gt; 1.0.5"
+
 
 And finally run your bundle:
 
-    :::bash
     # command line
     bundle
+
+
+Version 1.0.5
+
+## [Installation][10]
+
+*   [Compass][11]
+*   [Rails 3.x][13]
+*   [Manual Start][38]
+
+## [Usage][16]
+
+*   [Settings][17]
+*   [Basic Grids][18]
+*   [Responsive Grids][21]
+*   [Advanced][23]
+
+## [Troubleshooting][27]
+
+*   [Version Management][28]
+*   [Compass Install][34]
+*   [Rails 3.x Install][30]
+
+Susy is based on Natalie Downe's [CSS Systems][39], made possible by [Sass][40], and made easy with [Compass][2]. You can use it anywhere, from static sites to Django, Rails, Wordpress and more. It even comes packaged as part of [Middleman][41], to make your life easy.
+
+This site was built with HTML5 and CSS3 using [Middleman][41], [Compass][2], [Sass][40], [Susy][1], [HTML5 Boilerplate][42], [Modernizr][43], [Modular Scale][44], [Solarized][45] colors, [Pygments][46] syntax highlighting, [IcoMoon][47] icons, and Franklin Gothic with Century OldStyle from [Fontspring][48].
+
+Susy was created by [Eric A. Meyer][49] &amp; [OddBird][50], and is maintained with the help of [Danny Palmer][51], and a number of wonderful [contributors][52]. [Get involved][53]!
+
+[ Copyright © 2012 ][54] [Eric A. Meyer][55]
+An [OddBird][56] project.
+
+*   [show grid][57]
+*   [hide grid][58]
+
+ [1]: http://susy.oddbird.net/
+ [2]: http://www.compass-style.org/
+ [3]: http://susy.oddbird.net/guides/getting-started/
+ [4]: http://susy.oddbird.net/guides/reference/
+ [5]: http://susy.oddbird.net/demos/
+ [6]: http://susy.oddbird.net/sites-using-susy/
+ [7]: https://github.com/ericam/susy
+ [8]: http://stackoverflow.com/questions/tagged/susy-compass
+ [9]: http://twitter.com/compasssusy/
+ [10]: http://susy.oddbird.net#start-install
+ [11]: http://susy.oddbird.net#start-compass
+ [12]: http://compass-style.org/
+ [13]: http://susy.oddbird.net#start-rails
+ [14]: http://susy.oddbird.net#start-manual
+ [15]: https://github.com/ericam/susy/archive/master.zip
+ [16]: http://susy.oddbird.net#start-usage
+ [17]: http://susy.oddbird.net#start-settings
+ [18]: http://susy.oddbird.net#start-basic
+ [19]: http://susy.oddbird.net/reference/#ref-container
+ [20]: http://susy.oddbird.net/reference/#ref-span-columns
+ [21]: http://susy.oddbird.net#start-responsive
+ [22]: http://susy.oddbird.net/reference/#ref-at-breakpoint
+ [23]: http://susy.oddbird.net#start-advanced
+ [24]: http://susy.oddbird.net/reference/#ref-push
+ [25]: http://susy.oddbird.net/reference/#ref-pull
+ [26]: http://susy.oddbird.net/reference/
+ [27]: http://susy.oddbird.net#troubleshooting
+ [28]: http://susy.oddbird.net#troubleshooting-versions
+ [29]: http://rvm.io/rvm/install/
+ [30]: http://susy.oddbird.net#troubleshooting-rails-install
+ [31]: http://www.virtualenv.org/en/latest/index.html
+ [32]: https://gist.github.com/1078601
+ [33]: http://gembundler.com/
+ [34]: http://susy.oddbird.net#troubleshooting-compass-install
+ [35]: http://rvm.io
+ [36]: http://rvm.io/rvm/best-practices/
+ [37]: http://gembundler.com/gemfile.html
+ [38]: http://susy.oddbird.net#start-simple
+ [39]: http://www.slideshare.net/nataliedowne/css-systems-presentation
+ [40]: http://www.sass-lang.com/
+ [41]: http://www.middlemanapp.com/
+ [42]: http://html5boilerplate.com/
+ [43]: http://www.modernizr.com/
+ [44]: https://github.com/scottkellum/modular-scale
+ [45]: http://ethanschoonover.com/solarized
+ [46]: http://pygments.org/
+ [47]: http://keyamoon.com/icomoon/
+ [48]: http://www.fontspring.com/
+ [49]: http://github.com/ericam
+ [50]: http://oddbird.net
+ [51]: http://www.dannyprose.com
+ [52]: https://github.com/ericam/susy/graphs/contributors
+ [53]: http://github.com/ericam/susy/
+ [54]: https://github.com/ericam/susy/blob/master/LICENSE.txt
+ [55]: http://eric.andmeyer.com/
+ [56]: http://oddbird.net/
+ [57]: http://susy.oddbird.net#susy-oddbird-net
+ [58]: http://susy.oddbird.net#
