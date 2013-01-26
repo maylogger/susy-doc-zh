@@ -2,7 +2,7 @@
 
 SUSY 是專為 Compass 設計的「響應式格線」擴充套件
 
-## 你的架構、你的設計、我們幫你計算。
+## 您的架構、您的設計、我們幫你計算
 
 The web is a responsive place,
 from your lithe & lively development process
@@ -21,5 +21,4 @@ Build a one-off site in minutes,
 or create your own scalable object-oriented grid library
 for large projects.
 
-Susy provides the power-tools,
-what you build is up to you.
+Susy 提供了強大的工具讓你自己決定怎麼建構
