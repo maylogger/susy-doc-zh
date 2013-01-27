@@ -4,46 +4,53 @@
 
 ## [安裝][10]
 
-### [Compass][11]
+安裝有以下四種方法：
 
-Install from the command line:
+- 使用命令列安裝到 Compass 環境或現有專案
+- 安裝到 Rails 專案
+- 手動安裝
+- 手動安裝到 fire.app
 
-    # command line
+### 使用命令列安裝到 [Compass][11] 環境
+
+從命令列安裝：
+
+    # 命令列
     gem install susy
 
 
-Create a new [Compass][12] project:
+建立一個新的 [Compass][12] 專案：
 
-    # command line
+    # 命令列
     compass create  -r susy -u susy
 
 
-Or update an existing [Compass][12] project:
+或安裝到現有的 [Compass][12] 專案：
 
     # config.rb
     require "susy"
 
 
-### [Rails 3.x][13]
+### 安裝到 [Rails 3.x][13] 專案
 
     # Gemfile
     gem "susy"
 
 
-You may also need:
+你可能還需要：
 
     # Gemfile
     gem 'compass', '&gt;= 0.12.2'
     gem 'compass-rails', '&gt;= 1.0.3'
 
 
-And run:
+之後執行：
 
     # command line
     bundle install
 
 
-### [Manual Start][14]
+### [手動安裝][14]
 
 You can use this method if you're not using Compass from Terminal and/or Rails. This is going to work with CodeKit.
 
@@ -51,6 +58,10 @@ You can use this method if you're not using Compass from Terminal and/or Rails. 
 *   Copy the contents of the "sass" folder *feel free to remove everything else
 *   Paste the files in your projects "sass" folder (or whatever you call it)
 *   And import Susy! ( See [Usage][16] ) And you're good to go!
+
+### 安裝到 fire.app
+
+    待補步驟
 
 ## [Usage][16]
 
