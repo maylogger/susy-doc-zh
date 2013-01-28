@@ -22,7 +22,7 @@ The number of Columns in your default Grid Layout.
     // $total-columns: ;
     $total-columns: 12;
 
-*   ``: Unitless number.
+*   `<number>`: Unitless number.
 
 #### [Column Width][13]
 
@@ -31,7 +31,7 @@ The width of a single Column in your Grid.
     // $column-width: ;
     $column-width: 4em;
 
-*   ``: Length in any unit of measurement (em, px, %, etc).
+*   `<length>`: Length in any unit of measurement (em, px, %, etc).
 
 #### [Gutter Width][14]
 
