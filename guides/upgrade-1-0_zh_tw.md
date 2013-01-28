@@ -1,24 +1,3 @@
----
-title: Upgrade to Susy 1.0
-side_content: >
-  <p class="version">Version <span>1.0.5</span></p>
-  <h2>Upgrading from 0.9</h2>
-  <ul>
-    <li><a href="#ref-gem">the gem</a></li>
-    <li><a href="#ref-semantics">semantics</a></li>
-    <li><a href="#ref-upgrade">upgrade</a></li>
-  </ul>
-  <h2>New Features</h2>
-  <ul>
-    <li><a href="#ref-span-columns">span-columns</a></li>
-    <li><a href="#ref-rwd">responsive grids</a></li>
-    <li><a href="#ref-box-sizing">border-box sizing</a></li>
-    <li><a href="#ref-grid">grid shortcuts</a></li>
-    <li><a href="#ref-omega">omega shortcuts</a></li>
-    <li><a href="#ref-container">container settings</a></li>
-  </ul>
----
-
 ## Upgrade to Susy 1.0
 
 This release is loaded with new features,
