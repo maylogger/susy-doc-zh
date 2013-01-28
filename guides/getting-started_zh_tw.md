@@ -76,7 +76,7 @@
 
 就可以開始用了！
 
-### 安裝 fire.app （設計師請看此方法）
+### <a href="#start-fireapp" id="start-fireapp">安裝 fire.app</a> （設計師請看此方法）
 
 - 前往 <http://fireapp.handlino.com> 購買 fire.app
 - 用 fire.app 開啟一個 susy 專案 Create Project > susy > project
