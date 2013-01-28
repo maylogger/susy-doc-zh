@@ -81,21 +81,27 @@
 - 前往 <http://fireapp.handlino.com> 購買 fire.app
 - 用 fire.app 開啟一個 susy 專案 Create Project > susy > project
 
+就可以開始用了！
+
 ### <a href="#start-manual" id="start-manual">手動安裝</a>
-You can use this method if you're not using Compass from Terminal and/or Rails. This is going to work with CodeKit.
 
-* Simply <a href="https://github.com/ericam/susy/archive/master.zip">download</a> the zip file from GitHub
-* Copy the contents of the "sass" folder *feel free to remove everything else
-* Paste the files in your projects "sass" folder (or whatever you call it)
-* And import Susy! ( See <a href="#start-usage">Usage</a> )
-And you're good to go!
+如果說你不想使用命令列安裝到 Compass 或 Rails 專案，就用這方法吧。
+CodeKit 的愛用者也可以用這個方式安裝。
 
-## <a href="#start-usage" id="start-usage">Usage</a>
+* 只要從 github <a href="https://github.com/ericam/susy/archive/master.zip">下載</a> 這個 zip 檔
+* 拷貝 sass 資料夾裡面的所有東西，剩下的其他檔案你可以隨意刪除
+* 貼到你專案裡面的 sass 資料夾（或是你自己改過名字，那個放 sass 的資料夾就對了）
+* 最後 import Susy! ( 參考 <a href="#start-usage">使用方法</a> )
+
+就可以開始用了！
+
+## <a href="#start-usage" id="start-usage">使用方法</a>
 
     :::scss
     @import "susy";
 
-### <a href="#start-settings" id="start-settings">Settings</a>
+### <a href="#start-settings" id="start-settings">設定</a>
+
 Set up your default grid values: total columns, column width, and gutter width.
 
     :::scss
@@ -105,6 +111,7 @@ Set up your default grid values: total columns, column width, and gutter width.
     $grid-padding   : $gutter-width;  // grid-padding equal to gutters
 
 ### <a href="#start-basic" id="start-basic">Basic Grids</a>
+
 The basic Susy grid is composed using two simple mixins:
 
 - Use the [container()][container] mixin to create your initial grid context.
