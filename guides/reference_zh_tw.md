@@ -1,11 +1,17 @@
-## <a href="#ref-basic" id="ref-basic">Basic Usage</a>
+[Permalink](http://susy.oddbird.net/reference/)
+
+## <a href="#ref-basic" id="ref-basic">基本用法</a>
 
     :::scss
     @import 'susy';
 
-- **Container**: The root element of a _Grid_.
-- **Layout**: The total number of _Columns_ in a grid.
-- **Grid Padding**: Padding on the sides of the _Grid_.
+#### 名詞解釋：
+
+為了保有名詞跟程式的相關性，採用保留原文，附註括弧翻譯。
+
+- **Container**（容器）: 指 _Grid（格線）_最外面的框框。
+- **Layout**（布局）: 一個格線擁有的 _Columns（欄位）_ 數量。
+- **Grid Padding**（格線留白）: _Grid（格線）_ 兩旁的留白空間。
 - **Context**: The number of _Columns_ spanned by the parent element.
 - **Omega**: Any _Grid Element_ spanning the last _Column_ in its _Context_.
 

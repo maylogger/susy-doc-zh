@@ -1,4 +1,4 @@
-[Permalink](http://susy.oddbird.net/guides/ "Permalink to Susy: Getting Started")
+[Permalink](http://susy.oddbird.net/guides/)
 
 # Susy: 入門
 
