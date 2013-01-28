@@ -216,15 +216,6 @@ And finally run your bundle:
     bundle
 
 
- [1]: http://susy.oddbird.net/guides/
- [2]: http://www.compass-style.org/
- [3]: http://susy.oddbird.net/guides/getting-started/
- [4]: http://susy.oddbird.net/guides/reference/
- [5]: http://susy.oddbird.net/guides/demos/
- [6]: http://susy.oddbird.net/guides/sites-using-susy/
- [7]: https://github.com/ericam/susy
- [8]: http://stackoverflow.com/questions/tagged/susy-compass
- [9]: http://twitter.com/compasssusy/
  [10]: http://susy.oddbird.net/guides/#start-install
  [11]: http://susy.oddbird.net/guides/#start-compass
  [12]: http://compass-style.org/
