@@ -7,10 +7,10 @@
 安裝有以下五種方法：
 
 - [使用命令列安裝到 Compass 環境或現有專案](#使用命令列安裝到-compass-環境)
-- 安裝到 Rails 專案
-- 安裝到 Yeoman 專案
-- 安裝 fire.app（設計師請看此方法）
-- 手動安裝
+- [安裝到 Rails 專案](#安裝到-rails-3x-專案)
+- [安裝到 Yeoman 專案](#安裝到-yeoman-專案)
+- [安裝 fire.app](#安裝-fireapp-（設計師請看此方法）)（設計師請看此方法）
+- [手動安裝](#手動安裝)
 
 ### <a href="#start-compass" id="start-compass">使用命令列安裝到 Compass 環境</a>
 
