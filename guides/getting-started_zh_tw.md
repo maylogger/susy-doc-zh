@@ -2,91 +2,118 @@
 
 # Susy: 入門
 
-## [安裝][10]
+## <a href="#start-install" id="start-install">安裝</a>
 
-安裝有以下四種方法：
+安裝有以下五種方法：
 
 - 使用命令列安裝到 Compass 環境或現有專案
 - 安裝到 Rails 專案
+- 安裝到 Yeoman 專案
+- 安裝 fire.app（設計師請看此方法）
 - 手動安裝
-- 手動安裝到 fire.app
 
-### 使用命令列安裝到 [Compass][11] 環境
+### <a href="#start-compass" id="start-compass">使用命令列安裝到 Compass 環境</a>
 
 從命令列安裝：
 
+    :::bash
     # 命令列
     gem install susy
 
+建立一個新的 [Compass][compass] 專案：
 
-建立一個新的 [Compass][12] 專案：
-
+    :::bash
     # 命令列
-    compass create  -r susy -u susy
+    compass create <project name> -r susy -u susy
 
+或安裝到現有的 [Compass][compass] 專案：
 
-或安裝到現有的 [Compass][12] 專案：
-
+    :::ruby
     # config.rb
     require "susy"
 
+[compass]: http://compass-style.org/
 
-### 安裝到 [Rails 3.x][13] 專案
+### <a href="#start-rails" id="start-rails">安裝到 Rails 3.x 專案</a>
 
+    :::ruby
     # Gemfile
     gem "susy"
 
-
 你可能還需要：
 
+    :::ruby
     # Gemfile
-    gem 'compass', '&gt;= 0.12.2'
-    gem 'compass-rails', '&gt;= 1.0.3'
+    gem 'compass', '>= 0.12.2'
+    gem 'compass-rails', '>= 1.0.3'
 
 
 之後執行：
 
-    # command line
+    :::bash
+    # 命令列
     bundle install
 
+### <a href="#start-yeoman" id="start-yeoman">安裝到 Yeoman 專案</a>
 
-### [手動安裝][14]
+編輯你專案的根目錄裡的 **Gruntfile.js** 檔案，找到有關 compass 的規則那邊，照下面這個指示加入 option 的部份：
 
+    :::javascript
+    // Gruntfile.js
+    compass: {
+      dist: {
+        options: {
+          config: '.config.rb'
+        }
+      }
+    }
+
+然後在 **Gruntfile.js** 檔案同一個目錄下，建立一個檔案叫 **.config.rb** 並填入以下內容：
+
+    :::ruby
+    # .config.rb
+    require "susy"
+
+就可以開始用了！
+
+### 安裝 fire.app （設計師請看此方法）
+
+- 前往 <http://fireapp.handlino.com> 購買 fire.app
+- 用 fire.app 開啟一個 susy 專案 Create Project > susy > project
+
+### <a href="#start-manual" id="start-manual">手動安裝</a>
 You can use this method if you're not using Compass from Terminal and/or Rails. This is going to work with CodeKit.
 
-*   Simply [download][15] the zip file from GitHub
-*   Copy the contents of the "sass" folder *feel free to remove everything else
-*   Paste the files in your projects "sass" folder (or whatever you call it)
-*   And import Susy! ( See [Usage][16] ) And you're good to go!
+* Simply <a href="https://github.com/ericam/susy/archive/master.zip">download</a> the zip file from GitHub
+* Copy the contents of the "sass" folder *feel free to remove everything else
+* Paste the files in your projects "sass" folder (or whatever you call it)
+* And import Susy! ( See <a href="#start-usage">Usage</a> )
+And you're good to go!
 
-### 安裝到 fire.app
+## <a href="#start-usage" id="start-usage">Usage</a>
 
-    待補步驟
-
-## [Usage][16]
-
+    :::scss
     @import "susy";
 
-
-### [Settings][17]
-
+### <a href="#start-settings" id="start-settings">Settings</a>
 Set up your default grid values: total columns, column width, and gutter width.
 
+    :::scss
     $total-columns  : 12;             // a 12-column grid
     $column-width   : 4em;            // each column is 4em wide
     $gutter-width   : 1em;            // 1em gutters between columns
     $grid-padding   : $gutter-width;  // grid-padding equal to gutters
 
-
-### [Basic Grids][18]
-
+### <a href="#start-basic" id="start-basic">Basic Grids</a>
 The basic Susy grid is composed using two simple mixins:
 
-*   Use the [container()][19] mixin to create your initial grid context.
-*   Use the [span-columns()][20] mixin to declare the width of an element on the grid.
+- Use the [container()][container] mixin to create your initial grid context.
+- Use the [span-columns()][span-columns] mixin to declare
+  the width of an element on the grid.
 
 Here's a simple page layout:
 
+    :::scss
     .page {
       // page acts as a container for our grid.
       @include container;
@@ -109,15 +136,17 @@ Here's a simple page layout:
       }
     }
 
+### <a href="#start-responsive" id="start-responsive">Responsive Grids</a>
+Responsive Susy grids allow you to change the number of columns in a layout
+at different window sizes, using @media-queries with min and max widths.
+This requires one more mixin:
 
-### [Responsive Grids][21]
-
-Responsive Susy grids allow you to change the number of columns in a layout at different window sizes, using @media-queries with min and max widths. This requires one more mixin:
-
-*   Use [at-breakpoint()][22] to set different layouts at min- and max-width breakpoints.
+- Use [at-breakpoint()][at-breakpoint] to set different layouts
+  at min- and max-width breakpoints.
 
 Here's a mobile-first example:
 
+    :::scss
     $total-columns: 4;
 
     .page {
@@ -132,115 +161,125 @@ Here's a mobile-first example:
       }
     }
 
+### <a href="#start-advanced" id="start-advanced">Advanced</a>
+Susy is built to handle your unique markup, and any number of edge cases.
+It includes the standard [push()][push] and [pull()][pull] mixins,
+along with other useful functions and shortcuts,
+support for various grid styles,
+and even bi-directional grids for multi-lingual sites.
+Check the [reference documentation][reference] for details.
 
-### [Advanced][23]
+[reference]: ../reference/
+[container]: ../reference/#ref-container
+[span-columns]: ../reference/#ref-span-columns
+[at-breakpoint]: ../reference/#ref-at-breakpoint
+[push]: ../reference/#ref-push
+[pull]: ../reference/#ref-pull
 
-Susy is built to handle your unique markup, and any number of edge cases. It includes the standard [push()][24] and [pull()][25] mixins, along with other useful functions and shortcuts, support for various grid styles, and even bi-directional grids for multi-lingual sites. Check the [reference documentation][26] for details.
+## <a href="#troubleshooting" id="troubleshooting">Troubleshooting</a>
 
-## [Troubleshooting][27]
+### <a href="#troubleshooting-versions" id="troubleshooting-versions">Version Management</a>
 
-### [Version Management][28]
+When you are working with bundled gems and dependencies
+across a number of different projects,
+managing gem versions can become an issue.
 
-When you are working with bundled gems and dependencies across a number of different projects, managing gem versions can become an issue.
+If you are working in a **Ruby** environment,
+we recommend using [RVM](http://rvm.io/rvm/install/).
+See our [Rails troubleshooting](#troubleshooting-rails-install)
+below for some basic instructions, or
+[dig into RVM's installation instructions](http://rvm.io/rvm/install/).
 
-If you are working in a **Ruby** environment, we recommend using [RVM][29]. See our [Rails troubleshooting][30] below for some basic instructions, or [dig into RVM's installation instructions][29].
+In a **Python** environment,
+we recommend [virtualenv](http://www.virtualenv.org/en/latest/index.html)
+in conjunction with these
+["postactivate" and "predeactivate" scripts](https://gist.github.com/1078601)
+to add support for Ruby gems.
 
-In a **Python** environment, we recommend [virtualenv][31] in conjunction with these ["postactivate" and "predeactivate" scripts][32] to add support for Ruby gems.
+Once you have that in place,
+[Bundler](http://gembundler.com/)
+can be used in either environment
+to manage the actual installation
+and updating of the gems.
 
-Once you have that in place, [Bundler][33] can be used in either environment to manage the actual installation and updating of the gems.
+### <a href="#troubleshooting-compass-install" id="troubleshooting-compass-install">Compass Install</a>
 
-### [Compass Install][34]
+The old gem and the new gem have different names,
+but are required simply as ``susy``.
+That can cause a conflict if both gems are present.
 
-The old gem and the new gem have different names, but are required simply as `susy`. That can cause a conflict if both gems are present.
+If you have installed Susy in the past,
+make sure you've uninstalled older versions:
 
-If you have installed Susy in the past, make sure you've uninstalled older versions:
-
-    # command line
+    :::bash
+    # 命令列
     gem uninstall compass-susy-plugin
     # "compass-susy-plugin" was the gem name for 0.9.x and lower
     # Susy 1.0 switches to "susy" as the gem name
 
-
 And then install 1.0:
 
-    # command line
+    :::bash
+    # 命令列
     gem install susy
-
 
 Then use Compass as normal.
 
-### [Rails 3.x Install][30]
+### <a href="#troubleshooting-rails-install" id="troubleshooting-rails-install">Rails 3.x Install</a>
 
-We recommend you use [RVM][35] for using Susy with Rails projects. It has become the standard gem management system for Rails, it's very easy to install and use, and it helps create and manage Gemsets among different developers working on different branches.
+We recommend you use [RVM](http://rvm.io)
+for using Susy with Rails projects.
+It has become the standard gem management system for Rails,
+it's very easy to install and use,
+and it helps create and manage Gemsets
+among different developers working on different branches.
 
-[Here are some RVM best practices][36]:
+[Here are some RVM best practices](http://rvm.io/rvm/best-practices/):
 
-If you have installed Susy in the past, make sure you've uninstalled older versions. See [Compass Install][34] above.
+If you have installed Susy in the past,
+make sure you've uninstalled older versions.
+See [Compass Install](#troubleshooting-compass-install) above.
 
-[Install RVM][29] (These are basics, if you do not have Ruby and Rails already installed in your environment, we [recommend you use RVM's installation instructions][29]):
+[Install RVM](http://rvm.io/rvm/install/)
+(These are basics,
+if you do not have Ruby and Rails already installed in your environment,
+we [recommend you use RVM's installation instructions](http://rvm.io/rvm/install/)):
 
-    # command line
+    :::bash
+    # 命令列
     # from your system's root:
     curl -L get.rvm.io | bash -s stable
 
-
 Create a gemset for your site:
 
-    # command line
+    :::bash
+    # 命令列
     rvm gemset create fooBar
 
+Create an ``.rvmrc`` file at your site's root:
 
-Create an `.rvmrc` file at your site's root:
-
+    :::bash
     # .rvmrc
     rvm use 1.9.3@fooBar
     # Use whatever Ruby version number your app uses
 
+Now whenever you ``cd`` into your site's root,
+RVM will pick up and use that Gemset.
 
-Now whenever you `cd` into your site's root, RVM will pick up and use that Gemset.
+``cd`` to your site and install [Bundler](http://gembundler.com/):
 
-`cd` to your site and install [Bundler][33]:
-
-    # command line
+    :::bash
+    # 命令列
     gem install bundler
 
+Add Susy to your ``Gemfile``
+([more info on Gemfiles](http://gembundler.com/gemfile.html)):
 
-Add Susy to your `Gemfile` ([more info on Gemfiles][37]):
-
-    gem "susy", "~&gt; 1.0.5"
-
+    :::ruby
+    gem "susy", "~> 1.0.5"
 
 And finally run your bundle:
 
-    # command line
+    :::bash
+    # 命令列
     bundle
-
-
- [10]: http://susy.oddbird.net/guides/#start-install
- [11]: http://susy.oddbird.net/guides/#start-compass
- [12]: http://compass-style.org/
- [13]: http://susy.oddbird.net/guides/#start-rails
- [14]: http://susy.oddbird.net/guides/#start-manual
- [15]: https://github.com/ericam/susy/archive/master.zip
- [16]: http://susy.oddbird.net/guides/#start-usage
- [17]: http://susy.oddbird.net/guides/#start-settings
- [18]: http://susy.oddbird.net/guides/#start-basic
- [19]: http://susy.oddbird.net/guides/reference/#ref-container
- [20]: http://susy.oddbird.net/guides/reference/#ref-span-columns
- [21]: http://susy.oddbird.net/guides/#start-responsive
- [22]: http://susy.oddbird.net/guides/reference/#ref-at-breakpoint
- [23]: http://susy.oddbird.net/guides/#start-advanced
- [24]: http://susy.oddbird.net/guides/reference/#ref-push
- [25]: http://susy.oddbird.net/guides/reference/#ref-pull
- [26]: http://susy.oddbird.net/guides/reference/
- [27]: http://susy.oddbird.net/guides/#troubleshooting
- [28]: http://susy.oddbird.net/guides/#troubleshooting-versions
- [29]: http://rvm.io/rvm/install/
- [30]: http://susy.oddbird.net/guides/#troubleshooting-rails-install
- [31]: http://www.virtualenv.org/en/latest/index.html
- [32]: https://gist.github.com/1078601
- [33]: http://gembundler.com/
- [34]: http://susy.oddbird.net/guides/#troubleshooting-compass-install
- [35]: http://rvm.io
- [36]: http://rvm.io/rvm/best-practices/
- [37]: http://gembundler.com/gemfile.html
