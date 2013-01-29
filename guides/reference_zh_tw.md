@@ -12,8 +12,8 @@
 - **Container**（容器）: 指 _Grid（格線）_最外面的框框。
 - **Layout**（布局）: 一個格線擁有的 _Columns（欄位）_ 數量。
 - **Grid Padding**（格線留白）: _Grid（格線）_ 兩旁的留白空間。
-- **Context**: The number of _Columns_ spanned by the parent element.
-- **Omega**: Any _Grid Element_ spanning the last _Column_ in its _Context_.
+- **Context**（總欄位數）: 被隔開的 _Columns（欄位）_ 數量。
+- **Omega**: 所有 _Grid Element（格線元件）_ 在被分割 _Context（總欄位數）_ 中的最後一 _Column（欄）_。
 
 ### <a href="#ref-basic-settings" id="ref-basic-settings">Basic Settings</a>
 
