@@ -94,36 +94,38 @@
 - `<$columns>`（欄）： 跨越的 _Columns（欄位）_ 數。
   - `<omega>`（最後一欄）： [選填] 標記為唯一的最後一欄。
 - `<$context>`（上層元件欄數）： 目前所在巢狀格線的 _Context（上層元件欄數）_。
-  預設為： `$total-columns`（總欄位數）。
+  預設為： `$total-columns`（總欄位數）
 - `<$padding>`（留白）： [選填] 在這一個格線元素內的 padding（留白）空間。
   請設定一個長度 （單位跟格線相同）
   或設定多個長度 (from-direction（從起頭方向） to-direction（從收尾方向）)。
   預設： `false`（無）
 - `<$from>`： 指定你文件流向的源頭方向
-  預設： `$from-direction`（從起頭方向）。
+  預設： `$from-direction`（從起頭方向）
 
-#### <a href="#ref-omega" id="ref-omega">Omega</a>
-Apply to any omega element as an override.
+#### <a href="#ref-omega" id="ref-omega">Omega（最後一欄）</a>
+
+表示這是最後一欄的元素
 
     :::scss
     // omega([<$from>])
     .gallery-image {
-      @include span-columns(3,9); // each gallery-image is 3 of 9 cols.
-      &:nth-child(3n) { @include omega; } // every third image completes a row.
+      @include span-columns(3,9); // 每幅 gallery-image 佔了 9 欄中的 3欄
+      &:nth-child(3n) { @include omega; } // 並且每 3 個圖片就會變成一行
     }
 
-- `<$from>`: The origin direction of your document flow.
-  Default: `$from-direction`.
+- `<$from>`： 指定你文件流向的源頭方向
+  預設： `$from-direction`（從起頭方向）
 
-#### <a href="#ref-omega" id="ref-nth-omega">Nth-Omega</a>
-Apply to any element as an nth-child omega shortcut.
-Defaults to `:last-child`.
+#### <a href="#ref-omega" id="ref-nth-omega">Nth-Omega（某倍數的最後一欄）</a>
+
+快速指定某個倍數的元素是最後一欄
+預設值是： `:last-child`（最後一個子元素）
 
     :::scss
     // nth-omega([<$n>, <$selector>, <$from>])
     .gallery-image {
-      @include span-columns(3,9); // each gallery-image is 3 of 9 cols.
-      @include nth-omega(3n); // same as omega example above.
+      @include span-columns(3,9); // 每幅 gallery-image 佔了 9 欄中的 3欄
+      @include nth-omega(3n); // 並且每 3 個圖片就會變成一行，跟上面那個 demo 一樣效果
     }
 
 - `<$n>`: The keyword or equation to select: `[first | only | last | <equation>]`.
