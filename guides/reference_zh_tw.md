@@ -39,14 +39,14 @@
 
 - `<length>`: 任何長度單位的尺寸 (em, px, %, etc)
 
-#### <a href="#ref-gutter-width" id="ref-gutter-width">Gutter Width 欄間寬度</a>
+#### <a href="#ref-gutter-width" id="ref-gutter-width">Gutter Width 欄間隔</a>
 
-欄與欄之間的空間
+欄與欄的間隔
 
     :::scss
     // $gutter-width: <length>;
     $gutter-width: 1em;
-    // 設定欄與欄之間有 1em 的空間
+    // 設定欄與欄有 1em 的間隔
 
 - `<length>`: 單位必須與 `$column-width` 相同。
 
