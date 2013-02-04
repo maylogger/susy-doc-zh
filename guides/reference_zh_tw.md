@@ -10,16 +10,16 @@
 為了保有名詞跟程式的相關性，採用保留原文，附註括弧翻譯。
 
 - **Container**（容器）: 指 _Grid（格線）_最外面的框框。
-- **Layout**（布局）: 一個格線擁有的 _Columns（欄位）_ 數量。
-- **Grid Padding**（格線留白）: _Grid（格線）_ 兩旁的留白空間。
-- **Context**（內容欄位數）: 被分配跨越的 _Columns（欄位）_ 數。
-- **Omega**: 所有 _Grid Element（格線元件）_ 在被分割 _Context（總欄位數）_ 中的最後一 _Column（欄）_。
+- **Layout**（布局）: 一個格線擁有的 _Columns（欄）_ 數量。
+- **Grid Padding**（留邊）: _Grid（格線）_ 兩旁的留白空間。
+- **Context**（上層元件欄數）: 上層元件被分派的 _Columns（欄）_ 數量。
+- **Omega**: 所有 _Grid Element（格線元件）_ 在被分割 _Context（上層元件欄數）_ 中的最後一 _Column（欄）_。
 
 ### <a href="#ref-basic-settings" id="ref-basic-settings">基本設定</a>
 
-#### <a href="#ref-total-columns" id="ref-total-columns">Total Columns 總欄位數</a>
+#### <a href="#ref-total-columns" id="ref-total-columns">Total Columns 總欄數</a>
 
-格線裡的總欄位數
+格線裡的總欄數
 
     :::scss
     // $total-columns: <number>;
@@ -50,7 +50,7 @@
 
 - `<length>`: 單位必須與 `$column-width` 相同。
 
-#### <a href="#ref-grid-padding" id="ref-grid-padding">Grid Padding 格線留白</a>
+#### <a href="#ref-grid-padding" id="ref-grid-padding">Grid Padding 留邊</a>
 
 格線左邊與右邊的留白
 
@@ -73,13 +73,13 @@
     .page { @include container; }
     // 把 <div class="page"></div> 作為整個格線最外面的容器
 
-- `<$media-layout>`: （選填）media-layout（媒介版型）快速設定
+- `<$media-layout>`: [選填] media-layout（媒介版型）快速設定
   （參考下面的 '[Responsive Grids（響應式格線）][responsive]' ）
   預設: `$total-columns`.
 
 [responsive]: #ref-responsive
 
-#### <a href="#ref-span-columns" id="ref-span-columns">Span Columns（分割欄位）</a>
+#### <a href="#ref-span-columns" id="ref-span-columns">Span Columns（分派欄位）</a>
 
 指派一個 HTML 元素對齊到格線上
 
@@ -92,10 +92,10 @@
 
 
 - `<$columns>`（欄）： 跨越的 _Columns（欄位）_ 數。
-  - `<omega>`（最後一欄）： （選填）標記為唯一的最後一欄。
-- `<$context>`（內容欄位數）： 目前巢狀的 _Context（內容欄位數）_。
-  預設沒有巢狀的時候為： `$total-columns`（總欄位數）。
-- `<$padding>`（留白）： （選填）留白空間 padding applied inside an individual grid element.
+  - `<omega>`（最後一欄）： [選填] 標記為唯一的最後一欄。
+- `<$context>`（上層元件欄數）： 目前所在巢狀格線的 _Context（上層元件欄數）_。
+  預設為： `$total-columns`（總欄位數）。
+- `<$padding>`（留白）： [選填] 在這一個格線元素內的 padding（留白）空間。
   請設定一個長度 （單位跟格線相同）
   或設定多個長度 (from-direction（從起頭方向） to-direction（從收尾方向）)。
   預設： `false`（無）
