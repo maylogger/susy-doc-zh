@@ -12,81 +12,95 @@
 - **Container**（容器）: 指 _Grid（格線）_最外面的框框。
 - **Layout**（布局）: 一個格線擁有的 _Columns（欄位）_ 數量。
 - **Grid Padding**（格線留白）: _Grid（格線）_ 兩旁的留白空間。
-- **Context**（總欄位數）: 被隔開的 _Columns（欄位）_ 數量。
+- **Context**（內容欄位數）: 被分配跨越的 _Columns（欄位）_ 數。
 - **Omega**: 所有 _Grid Element（格線元件）_ 在被分割 _Context（總欄位數）_ 中的最後一 _Column（欄）_。
 
-### <a href="#ref-basic-settings" id="ref-basic-settings">Basic Settings</a>
+### <a href="#ref-basic-settings" id="ref-basic-settings">基本設定</a>
 
-#### <a href="#ref-total-columns" id="ref-total-columns">Total Columns</a>
-The number of Columns in your default Grid Layout.
+#### <a href="#ref-total-columns" id="ref-total-columns">Total Columns 總欄位數</a>
+
+格線裡的總欄位數
 
     :::scss
     // $total-columns: <number>;
     $total-columns: 12;
+    // 設定此格線總共12欄
 
-- `<number>`: Unitless number.
+- `<number>`: 沒有單位的數字。
 
-#### <a href="#ref-column-width" id="ref-column-width">Column Width</a>
-The width of a single Column in your Grid.
+#### <a href="#ref-column-width" id="ref-column-width">Column Width 欄寬</a>
+
+格線裡面一個欄位的寬度
 
     :::scss
     // $column-width: <length>;
     $column-width: 4em;
+    // 設定一個欄 4em 寬
 
-- `<length>`: Length in any unit of measurement (em, px, %, etc).
+- `<length>`: 任何長度單位的尺寸 (em, px, %, etc)
 
-#### <a href="#ref-gutter-width" id="ref-gutter-width">Gutter Width</a>
-The space between Columns.
+#### <a href="#ref-gutter-width" id="ref-gutter-width">Gutter Width 欄間寬度</a>
+
+欄與欄之間的空間
 
     :::scss
     // $gutter-width: <length>;
     $gutter-width: 1em;
+    // 設定欄與欄之間有 1em 的空間
 
-- `<length>`: Units must match `$column-width`.
+- `<length>`: 單位必須與 `$column-width` 相同。
 
-#### <a href="#ref-grid-padding" id="ref-grid-padding">Grid Padding</a>
-Padding on the left and right of a Grid Container.
+#### <a href="#ref-grid-padding" id="ref-grid-padding">Grid Padding 格線留白</a>
+
+格線左邊與右邊的留白
 
     :::scss
     // $grid-padding: <length>;
     $grid-padding: $gutter-width;  // 1em
+    // 這邊是設定兩邊留白跟欄間寬度相同
 
-- `<length>`: Units should match the container width
-  (`$column-width` unless `$container-width` is set directly).
+- `<length>`: 單位必須與容器寬度相同（如果容器寬度有設定的話）
+  (`$column-width（欄寬）` unless `$container-width（容器寬度）` is set directly).
 
-### <a href="#ref-basic-mixins" id="ref-basic-mixins">Basic Mixins</a>
+### <a href="#ref-basic-mixins" id="ref-basic-mixins">基本 Mixins</a>
 
-#### <a href="#ref-container" id="ref-container">Container</a>
-Establish the outer grid-containing element.
+#### <a href="#ref-container" id="ref-container">Container（容器）</a>
+
+建立最外面的格線容器元素
 
     :::scss
     // container([$<media-layout>]*)
     .page { @include container; }
+    // 把 <div class="page"></div> 作為整個格線最外面的容器
 
-- `<$media-layout>`: Optional media-layout shortcuts
-  (see '[Responsive Grids][responsive]' below).
-  Default: `$total-columns`.
+- `<$media-layout>`: （選填）media-layout（媒介版型）快速設定
+  （參考下面的 '[Responsive Grids（響應式格線）][responsive]' ）
+  預設: `$total-columns`.
 
 [responsive]: #ref-responsive
 
-#### <a href="#ref-span-columns" id="ref-span-columns">Span Columns</a>
-Align an element to the Susy Grid.
+#### <a href="#ref-span-columns" id="ref-span-columns">Span Columns（分割欄位）</a>
+
+指派一個 HTML 元素對齊到格線上
 
     :::scss
     // span-columns(<$columns> [<omega> , <$context>, <$padding>, <$from>])
     nav { @include span-columns(3,12); }
+    // 設定 <nav> 這個元素寬為 12 欄格線中的 3 欄
     article { @include span-columns(9 omega,12); }
+    // 設定 <article> 這個元素的寬為 12 欄格線中的 9 欄，並且為 omega（最後一欄）屬性
 
-- `<$columns>`: The number of _Columns_ to span.
-  - `<omega>`: Optional flag to signal the last element in a row.
-- `<$context>`: Current nesting _Context_.
-  Default: `$total-columns`.
-- `<$padding>`: Optional padding applied inside an individual grid element.
-  Given as a length (same units as the grid)
-  or a list of lengths (from-direction to-direction).
-  Default: `false`.
-- `<$from>`: The origin direction of your document flow.
-  Default: `$from-direction`.
+
+- `<$columns>`（欄）： 跨越的 _Columns（欄位）_ 數。
+  - `<omega>`（最後一欄）： （選填）標記為唯一的最後一欄。
+- `<$context>`（內容欄位數）： 目前巢狀的 _Context（內容欄位數）_。
+  預設沒有巢狀的時候為： `$total-columns`（總欄位數）。
+- `<$padding>`（留白）： （選填）留白空間 padding applied inside an individual grid element.
+  請設定一個長度 （單位跟格線相同）
+  或設定多個長度 (from-direction（從起頭方向） to-direction（從收尾方向）)。
+  預設： `false`（無）
+- `<$from>`： 指定你文件流向的源頭方向
+  預設： `$from-direction`（從起頭方向）。
 
 #### <a href="#ref-omega" id="ref-omega">Omega</a>
 Apply to any omega element as an override.
