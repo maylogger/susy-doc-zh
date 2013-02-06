@@ -24,7 +24,7 @@
     :::scss
     // $total-columns: <number>;
     $total-columns: 12;
-    // 設定此格線總共12欄
+    // 設定此格線總共 12 欄
 
 - `<number>`: 沒有單位的數字。
 
@@ -57,7 +57,7 @@
     :::scss
     // $grid-padding: <length>;
     $grid-padding: $gutter-width;  // 1em
-    // 這邊是設定兩邊留白跟欄間寬度相同
+    // 設定兩邊留白跟欄間隔相同
 
 - `<length>`: 單位必須與容器寬度相同（如果容器寬度有設定的話）
   (`$column-width（欄寬）` unless `$container-width（容器寬度）` is set directly).
@@ -74,8 +74,8 @@
     // 把 <div class="page"></div> 作為整個格線最外面的容器
 
 - `<$media-layout>`: [選填] media-layout（媒介版型）快速設定
-  （參考下面的 '[Responsive Grids（響應式格線）][responsive]' ）
-  預設: `$total-columns`.
+  （參考下面的 '[Responsive Grids（響應式格線）][responsive]' ）。
+  預設: `$total-columns`（總欄位數）。
 
 [responsive]: #ref-responsive
 
@@ -96,11 +96,11 @@
 - `<$context>`（上層元件欄數）： 目前所在巢狀格線的 _Context（上層元件欄數）_。
   預設為： `$total-columns`（總欄位數）
 - `<$padding>`（留白）： [選填] 在這一個格線元素內的 padding（留白）空間。
-  請設定一個長度 （單位跟格線相同）
+  請設定一個長度 （單位跟格線相同），
   或設定多個長度 (from-direction（從起頭方向） to-direction（從收尾方向）)。
-  預設： `false`（無）
-- `<$from>`： 指定你文件流向的源頭方向
-  預設： `$from-direction`（從起頭方向）
+  預設： `false`（無）。
+- `<$from>`： 指定你文件流向的源頭方向。
+  預設： `$from-direction`（從起頭方向）。
 
 #### <a href="#ref-omega" id="ref-omega">Omega（最後一欄）</a>
 
