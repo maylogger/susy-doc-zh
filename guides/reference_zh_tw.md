@@ -1,3 +1,97 @@
+---
+
+<p class="version">Version <span>1.0.8</span></p>
+<h2><a href="#ref-basic">基本用法</a></h2>
+<h3><a href="#ref-basic-settings">基本設定</a></h3>
+<ul>
+  <li><a href="#ref-total-columns">$total-columns</a></li>
+  <li><a href="#ref-column-width">$column-width</a></li>
+  <li><a href="#ref-gutter-width">$gutter-width</a></li>
+  <li><a href="#ref-grid-padding">$grid-padding</a></li>
+</ul>
+<h3><a href="#ref-basic-mixins">基本 Mixins</a></h3>
+<ul>
+  <li><a href="#ref-container">container()</a></li>
+  <li><a href="#ref-span-columns">span-columns()</a></li>
+  <li><a href="#ref-omega">omega()</a></li>
+  <li><a href="#ref-nth-omega">nth-omega()</a></li>
+</ul>
+<h2><a href="#ref-responsive">響應式格線/a></h2>
+<ul>
+  <li><a href="#ref-media-layouts">$media-layout</a></li>
+</ul>
+<h3><a href="#ref-responsive-mixins">響應式 Mixins</a></h3>
+<ul>
+  <li><a href="#ref-at-breakpoint">at-breakpoint()</a></li>
+  <li><a href="#ref-layout">layout()</a></li>
+  <li><a href="#ref-set-container-width">set-container-width()</a></li>
+  <li><a href="#ref-with-settings">with-grid-settings()</a></li>
+</ul>
+<h2><a href="#ref-helper">Grid Helpers</a></h2>
+<h3><a href="#ref-helper-sizing">Box Sizing</a></h3>
+<ul>
+  <li><a href="#ref-border-box-mixin">border-box-sizing()</a></li>
+</ul>
+<h3><a href="#ref-helper-isolation">Isolation</a></h3>
+<ul>
+  <li><a href="#ref-isolate">isolate()</a></li>
+  <li><a href="#ref-isolate-grid">isolate-grid()</a></li>
+</ul>
+<h3><a href="#ref-helper-padding">Padding Mixins</a></h3>
+<ul>
+  <li><a href="#ref-prefix">prefix()</a></li>
+  <li><a href="#ref-suffix">suffix()</a></li>
+  <li><a href="#ref-pad">pad()</a></li>
+  <li><a href="#ref-bleed">bleed()</a></li>
+</ul>
+<h3><a href="#ref-helper-margin">Margin Mixins</a></h3>
+<ul>
+  <li><a href="#ref-pre">pre()</a></li>
+  <li><a href="#ref-post">post()</a></li>
+  <li><a href="#ref-squish">squish()</a></li>
+  <li><a href="#ref-push">push()</a></li>
+  <li><a href="#ref-pull">pull()</a></li>
+</ul>
+<h3><a href="#ref-helper-reset">Reset Mixins</a></h3>
+<ul>
+  <li><a href="#ref-reset-columns">reset-columns()</a></li>
+  <li><a href="#ref-remove-omega">remove-omega()</a></li>
+  <li><a href="#ref-remove-nth-omega">remove-nth-omega()</a></li>
+</ul>
+<h3><a href="#ref-helper-other">Other Mixins</a></h3>
+<ul>
+  <li><a href="#ref-grid-background">susy-grid-background()</a></li>
+</ul>
+<h3><a href="#ref-helper-functions">Functions</a></h3>
+<ul>
+  <li><a href="#ref-columns">columns()</a></li>
+  <li><a href="#ref-gutter">gutter()</a></li>
+  <li><a href="#ref-space">space()</a></li>
+</ul>
+<h3><a href="#ref-container-override">Container Override Settings</a></h3>
+<ul>
+  <li><a href="#ref-container-width">$container-width</a></li>
+  <li><a href="#ref-container-style">$container-style</a></li>
+</ul>
+<h3><a href="#ref-direction-override">Direction Override Settings</a></h3>
+<ul>
+  <li><a href="#ref-from-direction">$from-direction</a></li>
+  <li><a href="#ref-omega-float">$omega-float</a></li>
+</ul>
+<h3><a href="#ref-compass-options">Compass Options</a></h3>
+<ul>
+  <li><a href="#ref-base-font-size">$base-font-size</a></li>
+  <li><a href="#ref-browser-support">$legacy-support-for-...</a></li>
+</ul>
+<h3><a href="#ref-breakpoint-output">Breakpoint Output</a></h3>
+<ul>
+  <li><a href="#ref-media-output">$breakpoint-media-output</a></li>
+  <li><a href="#ref-ie-output">$breakpoint-ie-output</a></li>
+  <li><a href="#ref-raw-output">$breakpoint-raw-output</a></li>
+</ul>
+
+---
+
 [Permalink](http://susy.oddbird.net/reference/)
 
 ## <a href="#ref-basic" id="ref-basic">基本用法</a>
@@ -17,7 +111,7 @@
 
 ### <a href="#ref-basic-settings" id="ref-basic-settings">基本設定</a>
 
-#### <a href="#ref-total-columns" id="ref-total-columns">Total Columns 總欄數</a>
+#### <a href="#ref-total-columns" id="ref-total-columns">Total Columns （總欄數）</a>
 
 格線裡的總欄數
 
@@ -28,7 +122,7 @@
 
 - `<number>`: 沒有單位的數字。
 
-#### <a href="#ref-column-width" id="ref-column-width">Column Width 欄寬</a>
+#### <a href="#ref-column-width" id="ref-column-width">Column Width （欄寬）</a>
 
 格線裡面一個欄位的寬度
 
@@ -39,7 +133,7 @@
 
 - `<length>`: 任何長度單位的尺寸 (em, px, %, etc)
 
-#### <a href="#ref-gutter-width" id="ref-gutter-width">Gutter Width 欄間隔</a>
+#### <a href="#ref-gutter-width" id="ref-gutter-width">Gutter Width （欄間隔）</a>
 
 欄與欄的間隔
 
@@ -50,7 +144,7 @@
 
 - `<length>`: 單位必須與 `$column-width` 相同。
 
-#### <a href="#ref-grid-padding" id="ref-grid-padding">Grid Padding 留邊</a>
+#### <a href="#ref-grid-padding" id="ref-grid-padding">Grid Padding （留邊）</a>
 
 格線左邊與右邊的留白
 
@@ -74,7 +168,7 @@
     // 把 <div class="page"></div> 作為整個格線最外面的容器
 
 - `<$media-layout>`: [選填] media-layout（媒介版型）快速設定
-  （參考下面的 '[Responsive Grids（響應式格線）][responsive]' ）。
+  （參考下面的 '[響應式格線][responsive]' ）。
   預設: `$total-columns`（總欄位數）。
 
 [responsive]: #ref-responsive
@@ -139,7 +233,7 @@
 - `<$from>`: The origin direction of your document flow.
   Default: `$from-direction`.
 
-## <a href="#ref-responsive" id="ref-responsive">Responsive Grids</a>
+## <a href="#ref-responsive" id="ref-responsive">響應式格線</a>
 
 - **Breakpoint**: A min- or max- viewport width at which to change _Layouts_.
 - **Media-Layout**: Shortcut for declaring _Breakpoints_ and _Layouts_ in Susy.
@@ -170,7 +264,7 @@
   This can be anything you want:
   "`no-mediaqueries`", "`ie8`", "`popcorn`", etc.
 
-### <a href="#ref-responsive-mixins" id="ref-responsive-mixins">Responsive Mixins</a>
+### <a href="#ref-responsive-mixins" id="ref-responsive-mixins">響應式 Mixins</a>
 
 #### <a href="#ref-at-breakpoint" id="ref-at-breakpoint">At-Breakpoint</a>
 At a given min- or max-width Breakpoint, use a given Layout.
@@ -202,13 +296,13 @@ Set an arbitrary Layout to use with any block of content.
 - `<$layout-cols>`: The number of _Columns_ to use in the _Layout_.
 - `<@content>`: Nested `@content` block will use the given _Layout_.
 
-#### <a href="#ref-container-width" id="ref-container-width">Set Container Width</a>
+#### <a href="#ref-set-container-width" id="ref-set-container-width">Set Container Width</a>
 Reset the width of a Container for a new Layout context.
 Can be used when `container()` has already been applied to an element,
 for DRYer output than simply using `container` again.
 
     :::scss
-    // set-container-width([<$columns>])
+    // set-container-width([<$columns>, <$style>])
     @include container;
     @include at-breakpoint(8) {
       @include set-container-width;
@@ -216,6 +310,8 @@ for DRYer output than simply using `container` again.
 
 - `<$columns>`: The number of _Columns_ to be contained.
   Default: Current value of `$total-columns` depending on _Layout_.
+- `<$style>`: Optionally return `static` lengths for grid calculations.
+  Default: `$container-style`.
 
 #### <a href="#ref-with-settings" id="ref-with-settings">With Grid Settings</a>
 Use different grid settings for a block of code -
@@ -223,7 +319,7 @@ whether the same grid at a different breakpoint,
 or a different grid altogether.
 
     :::scss
-    // with-grid-settings([<columns>, <width>, <gutter>, <padding>]) { <@content> }
+    // with-grid-settings([$<columns>, $<width>, <$gutter>, <$padding>]) { <@content> }
     @include with-grid-settings(12,4em,1.5em,1em) {
       .new-grid { @include container; }
     };
@@ -252,13 +348,55 @@ and set `$border-box-sizing` to `true`.
 You can use the variable on it's own to adjust the grid math,
 in cases where you want to apply the box-model separately.
 
+### <a href="#ref-helper-isolation" id="ref-helper-isolation">Isolation</a>
+
+#### <a href="#ref-isolate" id="ref-isolate">Isolate</a>
+Isolate the position of a grid element relative to the container.
+This should be used in addition to `span-columns`
+as a way of minimizing sub-pixel rounding errors in specific trouble locations.
+
+    :::scss
+    // isolate(<$location> [, <$context>, <$from>, <$style>])
+    @include span-columns(4); // 4-columns wide
+    @include isolate(2); // positioned in the second column
+
+- `<$location>`: The container-relative column number to position on.
+- `<$context>`: Current nesting _Context_.
+  Default: `$total-columns`.
+- `<$from>`: The origin direction of your document flow.
+  Default: `$from-direction`.
+- `<$style>`: Optionally return `static` lengths for grid calculations.
+  Default: `$container-style`.
+
+#### <a href="#ref-isolate-grid" id="ref-isolate-grid">Isolate Grid</a>
+Isolate a group of elements in an grid (such as an image gallery)
+using nth-child or nth-of-type for positioning.
+Provide the column-width of each element,
+and Susy will determine the positioning for you.
+
+    :::scss
+    // isolate-grid(<$columns> [, <$context>, <$selector>, <$from>, <$style>])
+    .gallery-item {
+      @include isolate-grid(3);
+    }
+
+- `<$columns>`: The number of _Columns_ for each item to span.
+- `<$context>`: Current nesting _Context_.
+  Default: `$total-columns`.
+- `<$selector>`: either 'child' or 'of-type'.
+  Default: `child`.
+- `<$from>`: The origin direction of your document flow.
+  Default: `$from-direction`.
+- `<$style>`: Optionally return `static` lengths for grid calculations.
+  Default: `$container-style`.
+
 ### <a href="#ref-helper-padding" id="ref-helper-padding">Padding Mixins</a>
 
 #### <a href="#ref-prefix" id="ref-prefix">Prefix</a>
 Add Columns of empty space as `padding` before an element.
 
     :::scss
-    // prefix(<$columns> [, <$context>, <$from>])
+    // prefix(<$columns> [, <$context>, <$from>, <$style>])
     .box { @include prefix(3); }
 
 - `<$columns>`: The number of _Columns_ to be added as `padding` before.
@@ -266,12 +404,14 @@ Add Columns of empty space as `padding` before an element.
   Default: `$total-columns`.
 - `<$from>`: The origin direction of your document flow.
   Default: `$from-direction`.
+- `<$style>`: Optionally return `static` lengths for grid calculations.
+  Default: `$container-style`.
 
 #### <a href="#ref-suffix" id="ref-suffix">Suffix</a>
 Add columns of empty space as padding after an element.
 
     :::scss
-    // suffix(<$columns> [, <$context>, <$from>])
+    // suffix(<$columns> [, <$context>, <$from>, <$style>])
     .box { @include suffix(2); }
 
 - `<$columns>`: The number of _Columns_ to be added as `padding` after.
@@ -279,12 +419,14 @@ Add columns of empty space as padding after an element.
   Default: `$total-columns`.
 - `<$from>`: The origin direction of your document flow.
   Default: `$from-direction`.
+- `<$style>`: Optionally return `static` lengths for grid calculations.
+  Default: `$container-style`.
 
 #### <a href="#ref-pad" id="ref-pad">Pad</a>
 Shortcut for adding both Prefix and Suffix `padding`.
 
     :::scss
-    // pad([<$prefix>, <$suffix>, <$context>, <$from>])
+    // pad([<$prefix>, <$suffix>, <$context>, <$from>, <$style>])
     .box { @include pad(3,2); }
 
 - `<$prefix>`: The number of _Columns_ to be added as `padding` before.
@@ -293,6 +435,25 @@ Shortcut for adding both Prefix and Suffix `padding`.
   Default: `$total-columns`.
 - `<$from>`: The origin direction of your document flow.
   Default: `$from-direction`.
+- `<$style>`: Optionally return `static` lengths for grid calculations.
+  Default: `$container-style`.
+
+#### <a href="#ref-bleed" id="ref-bleed">Bleed</a>
+Add negative margins and matching positive padding to an element,
+so that its background "bleeds" outside its natural position.
+
+    :::scss
+    // bleed(<$width> [<$sides>, <$style>])
+    @include bleed(2);
+
+- `<$width>`: The number of _Columns_ or arbitrary length to bleed.
+  Use `2 of 12` syntax for context in nested situations.
+- `<$sides>`: The sides of the element that should bleed.
+  Default: `left right`.
+- `<$style>`: Optionally return `static` lengths for grid calculations.
+  Default: `$container-style`.
+- `<$style>`: Optionally return `static` lengths for grid calculations.
+  Default: `$container-style`.
 
 ### <a href="#ref-helper-margin" id="ref-helper-margin">Margin Mixins</a>
 
@@ -300,7 +461,7 @@ Shortcut for adding both Prefix and Suffix `padding`.
 Add columns of empty space as margin before an element.
 
     :::scss
-    // pre(<$columns> [, <$context>, <$from>])
+    // pre(<$columns> [, <$context>, <$from>, <$style>])
     .box { @include pre(2); }
 
 - `<$columns>`: The number of _Columns_ to be added as `margin` before.
@@ -308,12 +469,14 @@ Add columns of empty space as margin before an element.
   Default: `$total-columns`.
 - `<$from>`: The origin direction of your document flow.
   Default: `$from-direction`.
+- `<$style>`: Optionally return `static` lengths for grid calculations.
+  Default: `$container-style`.
 
 #### <a href="#ref-post" id="ref-post">Post</a>
 Add columns of empty space as margin after an element.
 
     :::scss
-    // post(<$columns> [, <$context>, <$from>])
+    // post(<$columns> [, <$context>, <$from>, <$style>])
     .box { @include post(3); }
 
 - `<$columns>`: The number of _Columns_ to be added as `margin` after.
@@ -321,12 +484,14 @@ Add columns of empty space as margin after an element.
   Default: `$total-columns`.
 - `<$from>`: The origin direction of your document flow.
   Default: `$from-direction`.
+- `<$style>`: Optionally return `static` lengths for grid calculations.
+  Default: `$container-style`.
 
 #### <a href="#ref-squish" id="ref-squish">Squish</a>
 Shortcut to add empty space as margin before and after an element.
 
     :::scss
-    // squish([<$pre>, <$post>, <$context>, <$from>])
+    // squish([<$pre>, <$post>, <$context>, <$from>, <$style>])
     .box { @include squish(2,3); }
 
 - `<$pre>`: The number of _Columns_ to be added as `margin` before.
@@ -335,19 +500,21 @@ Shortcut to add empty space as margin before and after an element.
   Default: `$total-columns`.
 - `<$from>`: The origin direction of your document flow.
   Default: `$from-direction`.
+- `<$style>`: Optionally return `static` lengths for grid calculations.
+  Default: `$container-style`.
 
 #### <a href="#ref-push" id="ref-push">Push</a>
 Identical to [pre](#ref-pre).
 
     :::scss
-    // push(<$columns> [, <$context>, <$from>])
+    // push(<$columns> [, <$context>, <$from>, <$style>])
     .box { @include push(3); }
 
 #### <a href="#ref-pull" id="ref-pull">Pull</a>
 Add negative margins before an element, to pull it against the flow.
 
     :::scss
-    // pull(<$columns> [, <$context>, <$from>])
+    // pull(<$columns> [, <$context>, <$from>, <$style>])
     .box { @include pull(2); }
 
 - `<$columns>`: The number of _Columns_ to be subtracted as `margin` before.
@@ -355,6 +522,8 @@ Add negative margins before an element, to pull it against the flow.
   Default: `$total-columns`.
 - `<$from>`: The origin direction of your document flow.
   Default: `$from-direction`.
+- `<$style>`: Optionally return `static` lengths for grid calculations.
+  Default: `$container-style`.
 
 ### <a href="#ref-helper-reset" id="ref-helper-reset">Reset Mixins</a>
 
@@ -379,7 +548,7 @@ Note that unlike omega,
 this requires a context when nested.
 
     :::scss
-    // remove-omega([<$context>, <$from>])
+    // remove-omega([<$context>, <$from>, <$style>])
     .gallery-image {
       &:nth-child(3n) { @include remove-omega; } // 3rd images no longer complete rows.
     }
@@ -388,6 +557,8 @@ this requires a context when nested.
   Default: `$total-columns`.
 - `<$from>`: The origin direction of your document flow.
   Default: `$from-direction`.
+- `<$style>`: Optionally return `static` lengths for grid calculations.
+  Default: `$container-style`.
 
 #### <a href="#ref-remove-nth-omega" id="ref-remove-nth-omega">Remove Nth-Omega</a>
 Apply to any previously nth-omega element
@@ -397,7 +568,7 @@ Note that unlike omega,
 this requires a context when nested.
 
     :::scss
-    // remove-nth-omega([<$n>, <$selector>, <$context>, <$from>])
+    // remove-nth-omega([<$n>, <$selector>, <$context>, <$from>, <$style>])
     .gallery-image {
       @include remove-nth-omega(3n); // same as remove-omega example above.
     }
@@ -413,6 +584,8 @@ this requires a context when nested.
   Default: `$total-columns`.
 - `<$from>`: The origin direction of your document flow.
   Default: `$from-direction`.
+- `<$style>`: Optionally return `static` lengths for grid calculations.
+  Default: `$container-style`.
 
 ### <a href="#ref-helper-other" id="ref-helper-other">Other Mixins</a>
 
@@ -440,33 +613,39 @@ Similar to [span-columns](#ref-span-columns) mixin,
 but returns the math-ready `%` multiplier.
 
     :::scss
-    // columns(<$columns> [, <$context>])
+    // columns(<$columns> [, <$context>, <$style>])
     .item { width: columns(3,6); }
 
 - `<$columns>`: The number of _Columns_ to span,
 - `<$context>`: The _Context_.
   Default: `$total-columns`.
+- `<$style>`: Optionally return `static` lengths for grid calculations.
+  Default: `$container-style`.
 
 #### <a href="#ref-gutter" id="ref-gutter">Gutter</a>
 The `%` width of one gutter in any given context.
 
     :::scss
-    // gutter([<$context>])
+    // gutter([<$context>, <$style>])
     .item { margin-right: gutter(6) + columns(3,6); }
 
 - `<$context>`: The _Context_.
   Default: `$total-columns`.
+- `<$style>`: Optionally return `static` lengths for grid calculations.
+  Default: `$container-style`.
 
 #### <a href="#ref-space" id="ref-space">Space</a>
 Total `%` space taken by Columns, including internal AND external gutters.
 
     :::scss
-    // space(<$columns> [, <$context>])
+    // space(<$columns> [, <$context>, <$style>])
     .item { margin-right: space(3,6); }
 
 - `<$columns>`: The number of _Columns_ to span,
 - `<$context>`: The _Context_.
   Default: `$total-columns`.
+- `<$style>`: Optionally return `static` lengths for grid calculations.
+  Default: `$container-style`.
 
 ### <a href="#ref-container-override" id="ref-container-override">Container Override Settings</a>
 
@@ -554,7 +733,7 @@ although only IE6 and IE7 have special cases attached to them currently.
 
 [support]: http://compass-style.org/reference/compass/support/
 
-### <a href="#ref-compass-options" id="ref-compass-options">Breakpoint Output</a>
+### <a href="#ref-breakpoint-output" id="ref-breakpoint-output">Breakpoint Output</a>
 If you are compiling seperate files for IE-fallbacks,
 it can be useful to output only the modern code in one file
 and only the fallbacks in another file.
